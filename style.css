@@ -9,6 +9,7 @@ body, html {
     background-color: #1a1a1a;
     font-family: 'Arial', sans-serif;
     color: #fff;
+    overflow: hidden;
 }
 
 .container {
@@ -23,6 +24,63 @@ body, html {
     right: 0;
     bottom: 0;
     z-index: -1;
+    pointer-events: none;
+}
+
+.firework {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    height: 100px;
+    background-color: transparent;
+    animation: firework-launch 1s infinite ease-in-out;
+}
+
+.firework:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.firework:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.firework:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes firework-launch {
+    0% {
+        transform: translateX(0) translateY(0);
+        height: 100px;
+        background-color: transparent;
+    }
+    50% {
+        height: 200px;
+        background-color: yellow;
+    }
+    70% {
+        height: 250px;
+        background-color: transparent;
+    }
+    100% {
+        transform: translateX(calc(100vw - 50%)) translateY(calc(-100vh + 50px));
+        height: 0;
+        background-color: transparent;
+    }
+}
+
+@keyframes firework-explode {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
 }
 
 .card {
@@ -31,6 +89,7 @@ body, html {
     border-radius: 10px;
     width: 300px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1;
 }
 
 .card h1 {
@@ -52,6 +111,10 @@ body, html {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+.qr-code {
+    text-align: center;
 }
 
 .qr-code img {
