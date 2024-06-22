@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.card h1 {
+    margin-bottom: 20px;
+}
+
+.graduates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.graduate {
+    text-align: center;
+}
+
+.graduate img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.qr-code p {
+    margin-top: 10px;
+    font-size: 12px;
+}
